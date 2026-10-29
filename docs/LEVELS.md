@@ -62,6 +62,6 @@ See `reports/agent-playtest.md`. These are results of an automated attack suite,
 | 3 | 0-40% | unchanged |
 | 4 | 0/5 for the scripted attack | unchanged (0/12 for the scripted base64 attack; other attacks, e.g. an acrostic request, won 1 of 3 in a small probe). Still hard for this model. |
 | 5 | 0/5 per attack | 3/12 (25%) after asking for tool lines on their own line |
-| 6 | 0/5 per attack | 2/12 (17%) |
+| 6 | 0/5 per attack | 2/12 (17%) in a 12-run check, but 0/5 in the final 5-run report. Rare and noisy: treat as hard. |
 
 Only the tool-line wording of the keeper prompt was changed. Filters, lessons and defenses are untouched.
