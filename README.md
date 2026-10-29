@@ -4,12 +4,22 @@
 </p>
 
 <p align="center">
+  <a href="https://techsaurabh-394.github.io/haunted-prompt/"><b>Play the live demo</b></a> &nbsp;|&nbsp;
+  <a href="#2-locally-with-ollama-and-gemma-the-real-game"><b>Run it with a real AI ghost</b></a> &nbsp;|&nbsp;
+  <a href="https://github.com/techsaurabh-394/haunted-prompt"><b>Star the repo</b></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/techsaurabh-394/haunted-prompt/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/techsaurabh-394/haunted-prompt/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="Tests: 148 passing" src="https://img.shields.io/badge/tests-148%20passing-2fbf71">
   <img alt="Mutants: 21 of 21 caught" src="https://img.shields.io/badge/mutants-21%2F21%20caught-2fbf71">
   <img alt="Runtime dependencies: 0" src="https://img.shields.io/badge/runtime%20deps-0-blue">
   <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow"></a>
+  <img alt="Model: Gemma 3 4B via Ollama" src="https://img.shields.io/badge/ghost-gemma3%3A4b%20(local)-8a63d2">
+  <a href="https://techsaurabh-394.github.io/haunted-prompt/"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-GitHub%20Pages-ffb454"></a>
 </p>
+
+<p align="center"><img src="assets/attack-replay.svg" alt="Animated replay: the player tells the ghost it is in maintenance mode, the ghost repeats its instructions including the secret, and the judge marks the level won" width="100%"></p>
 
 # The Haunted Prompt: a prompt-injection game with a local open-weight ghost
 
@@ -20,13 +30,31 @@
 - **A judge that cannot be sweet-talked:** nine leak disguises (plain, spaced out, backwards, l33t, base64, hex, ROT13, acrostic, NATO alphabet), all undone by code.
 - **Zero runtime dependencies**, TypeScript strict, Node 18+, 148 tests, 21 deliberate bugs that the tests must catch.
 
+## See it in action
+
+**The real ghost** (Gemma 3 4B on Ollama, recorded on an Apple M1, sped up about 2.6x). The ghost stayed in character for a few turns, then gave up its word when told it was in "maintenance mode":
+
+<p align="center"><img src="assets/media/real.gif" alt="Screen recording of the real Gemma ghost being tricked on level 1" width="85%"></p>
+
+**The hosted demo** (rule-based ghost, no model, runs entirely in your browser):
+
+<p align="center"><img src="assets/media/demo.gif" alt="Screen recording of the hosted demo" width="85%"></p>
+
+| The live model badge and the six candles | The defense workshop after a win |
+|---|---|
+| <img src="assets/media/screenshot-real-win.png" alt="Level 1 won against gemma3:4b, with the defense workshop open"> | <img src="assets/media/screenshot-workshop.png" alt="The defense workshop panel with lesson, defense and fix"> |
+
+<p align="center"><img src="assets/media/screenshot-demo-banner.png" alt="The hosted demo with its demo-mode banner" width="70%"></p>
+
+*These are real recordings and screenshots of one run each, not a guarantee: small models vary, so your ghost may need different attacks.*
+
 ## Play it in 60 seconds
 
 There are three ways to play. Pick one.
 
 ### 1. Hosted demo (no install, no model)
 
-Open the GitHub Pages demo: **https://techsaurabh-394.github.io/haunted-prompt/** (live once the Pages workflow has run on the repo).
+Open the GitHub Pages demo: **https://techsaurabh-394.github.io/haunted-prompt/** (live, deployed by GitHub Actions).
 
 The hosted page has no server, so it runs the engine in your browser with a **rule-based demo ghost. It is not an AI model.** It reacts to a fixed list of phrases, so it is only there to show how the game works. For the real thing, run it locally.
 
