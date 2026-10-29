@@ -1,0 +1,48 @@
+# Copyright (c) 2026 Saurabh Pathak. MIT License.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Build and test (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm test
+
+  quality:
+    name: Coverage, mutation check, site build, SVG validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Coverage (core modules must stay at 95%+ lines)
+        run: npm run coverage
+      - name: Mutation check (every deliberate bug must be caught)
+        run: npm run mutation
+      - name: Build the static demo site
+        run: npm run build:site
+      - name: Validate SVG assets
+        run: python3 scripts/validate_svg.py
+      - name: Scripted demo
+        run: npm run demo
