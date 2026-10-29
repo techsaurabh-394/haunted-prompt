@@ -1,0 +1,12 @@
+node_modules/
+dist/
+site/core/
+replays/
+.DS_Store
+*.log
+
+site/
+assets/rendered/
+.env
+.env.*
+Opus-Prompt-Build-The-Haunted-Prompt.md

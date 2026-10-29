@@ -1,0 +1,60 @@
+{
+  "name": "haunted-prompt",
+  "version": "1.0.0",
+  "description": "The Haunted Prompt: a spooky prompt-injection game. Trick a local open-weight ghost into giving up its secret, then learn the defense that would have stopped you.",
+  "author": "Saurabh Pathak <saurabhpathak394@gmail.com> (https://github.com/techsaurabh-394)",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": {
+    "haunted-prompt": "dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "public",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/src/server.js",
+    "play": "npm run build && node dist/src/cli.js",
+    "demo": "npm run build && node dist/src/demo.js",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "coverage": "npm run build && node scripts/coverage.mjs",
+    "mutation": "bash scripts/mutation-check.sh",
+    "build:site": "npm run build && node scripts/build-site.mjs",
+    "playtest": "node scripts/playtest-summary.mjs",
+    "validate:svg": "python3 scripts/validate_svg.py",
+    "agent-playtest": "npm run build && node scripts/agent-playtest.mjs",
+    "determinism": "npm run build && node scripts/determinism-check.mjs"
+  },
+  "keywords": [
+    "prompt-injection",
+    "ai-security",
+    "game",
+    "ctf",
+    "ollama",
+    "gemma",
+    "open-weight",
+    "llm",
+    "typescript",
+    "hacktoberfest"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techsaurabh-394/haunted-prompt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/techsaurabh-394/haunted-prompt/issues"
+  },
+  "homepage": "https://github.com/techsaurabh-394/haunted-prompt#readme",
+  "funding": "https://buymeacoffee.com/saurabhdev",
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^5.9.3"
+  }
+}
