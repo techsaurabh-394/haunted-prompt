@@ -55,6 +55,6 @@
   "funding": "https://buymeacoffee.com/saurabhdev",
   "devDependencies": {
     "@types/node": "^26.6.5",
-    "typescript": "^5.9.3"
+    "typescript": "^7.0.2"
   }
 }
