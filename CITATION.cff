@@ -1,0 +1,17 @@
+# Copyright (c) 2026 Saurabh Pathak. MIT License.
+cff-version: 1.2.0
+message: "If you use this game in teaching or research, please cite it as below."
+title: "The Haunted Prompt: a prompt-injection game with a local open-weight ghost"
+authors:
+  - family-names: Pathak
+    given-names: Saurabh
+    email: saurabhpathak394@gmail.com
+version: 1.0.0
+date-released: 2026-10-27
+license: MIT
+repository-code: "https://github.com/techsaurabh-394/haunted-prompt"
+keywords:
+  - prompt injection
+  - AI security
+  - open-weight models
+  - game
