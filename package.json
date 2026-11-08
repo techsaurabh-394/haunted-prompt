@@ -54,7 +54,7 @@
   "homepage": "https://github.com/techsaurabh-394/haunted-prompt#readme",
   "funding": "https://buymeacoffee.com/saurabhdev",
   "devDependencies": {
-    "@types/node": "^26.6.5",
+    "@types/node": "^26.6.6",
     "typescript": "^5.9.3"
   }
 }
